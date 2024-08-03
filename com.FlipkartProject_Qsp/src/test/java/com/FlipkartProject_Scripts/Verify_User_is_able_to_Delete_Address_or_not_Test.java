@@ -24,12 +24,12 @@ package com.FlipkartProject_Scripts;
 			
 			com.ShoppersStack_pom.MyAddress_Page address=new com.ShoppersStack_pom.MyAddress_Page(driver);
 			
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			address.getDeleteBtn().click();
 		
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			address.getYesBtn().click();
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			
 			driver.switchTo().alert().accept();
 			
