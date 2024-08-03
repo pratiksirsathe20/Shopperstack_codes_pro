@@ -66,11 +66,11 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 		public void beforeClass() throws IOException{
 			System.out.println("@BeforeClass");
 			
-//			String browser = file.readPropertyData("browse");
-//			String url = file.readPropertyData("url");
+			String browser = file.readPropertyData("browse");
+			String url = file.readPropertyData("url");
 			
-			String browser = System.getProperty("browser");
-			String url = System.getProperty("url");
+//			String browser = System.getProperty("browser");
+//			String url = System.getProperty("url");
 			
 			if(browser.contains("chrome")) {
 				driver=new ChromeDriver();
