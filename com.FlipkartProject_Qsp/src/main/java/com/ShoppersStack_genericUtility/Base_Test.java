@@ -88,14 +88,14 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 		
 		@BeforeMethod
 		
-		public void beforeMethod() throws IOException{
+		public void beforeMethod() throws IOException, InterruptedException{
 			System.out.println("@BeforeMethod");
 			welcome=new Welcome_Page(driver);
 			WebElement ele = welcome.getloginBtn();
 			
 			wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 			wait.until(ExpectedConditions.elementToBeClickable(ele));
-			
+			Thread.sleep(3000);
 			ele.click();
 			
 			login=new Login_Page(driver);
